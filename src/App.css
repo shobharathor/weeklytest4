@@ -1,38 +1,111 @@
-.App {
-  text-align: center;
+
+/* src/App.css */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.column {
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 20px;
+  width: 48%;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #343a40;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.employee, .team-member {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-bottom: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #dee2e6;
+  transition: background-color 0.3s;
+}
+
+.employee:hover, .team-member:hover {
+  background-color: #f1f1f1;
+}
+
+.employee:last-child, .team-member:last-child {
+  border-bottom: none;
+}
+
+.employee.disabled, .team-member.disabled {
+  color: gray;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.add-button {
+  background-color: #28a745;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.add-button:hover {
+  background-color: #218838;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.remove-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+.remove-button:hover {
+  background-color: #c82333;
+}
+
+.sort-button {
+  background-color: #007bff;
+  color: white;
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.sort-button:hover {
+  background-color: #0069d9;
+}
+
+.age {
+  color: #6c757d;
+  margin-left: 30%;
+  flex: 1;
+}
+
+.employee-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
 }
